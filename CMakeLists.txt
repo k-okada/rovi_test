@@ -27,3 +27,8 @@ include_directories(
 
 add_executable(pubarray 01/pubarray.cpp)
 target_link_libraries(pubarray ${catkin_LIBRARIES})
+
+if(CATKIN_ENABLE_TESTING)
+  find_package(rostest REQUIRED)
+  add_rostest(01/test.launch)
+endif()

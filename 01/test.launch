@@ -1,4 +1,10 @@
 <launch>
   <node name="sub" type="sub.py" pkg="rovi_test" output="screen" />
-  <node name="pub" type="pubarray" pkg="rovi_test" args="500000 600000" output="screen" />  
+  <node name="pub" type="pubarray" pkg="rovi_test" args="500000 600000" output="screen" />
+
+  <param name="pubarray_test/topic" value="array" />
+  <param name="pubarray_test/hz" value="1.0" />
+  <param name="pubarray_test/hzerror" value="0.5" />
+  <param name="pubarray_test/test_duration" value="60.0" />
+  <test test-name="pubarray" type="hztest" pkg="rostest" name="pubarray_test" time-limit="100"/>
 </launch>
