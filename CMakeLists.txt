@@ -9,8 +9,6 @@ find_package(catkin REQUIRED COMPONENTS
   stereo_msgs
   cv_bridge
   tf2_ros
-  rovi
-  rovi_utils
 )
 
 catkin_package(
