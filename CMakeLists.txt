@@ -4,16 +4,10 @@ project(rovi_test)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   std_msgs
-  geometry_msgs
-  sensor_msgs
-  stereo_msgs
-  cv_bridge
-  tf2_ros
 )
 
 catkin_package(
-  CATKIN_DEPENDS roscpp std_msgs geometry_msgs sensor_msgs cv_bridge tf2_ros
-  DEPENDS OpenCV
+  CATKIN_DEPENDS roscpp std_msgs
 )
 
 #catkin_python_setup()
@@ -21,8 +15,6 @@ catkin_package(
 include_directories(
   include
   ${catkin_INCLUDE_DIRS}
-  ${OpenCV_INCLUDE_DIRS}
-  ${EIGEN3_INCLUDE_DIRS}
 )
 
 add_executable(pubarray 01/pubarray.cpp)
